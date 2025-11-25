@@ -1,0 +1,41 @@
+<!--LC 7th Hidden Image -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hidden Image</title>
+    <script>
+     showing="none"
+     function neilfunc(){
+        if(showing=="none"){
+            document.getElementById("neil").style.display="block"
+            showing="block"
+        }else{
+            document.getElementById("neil").style.display="none"
+            showing="none"
+        }
+     }
+    </script>
+    <style>
+        img{
+            display: none;
+            width: 25%
+        }
+    </style>
+</head>
+<body>
+    <h1> About space exploration</h1>
+    <p>We refer to the expanding universe with one simple word: space. But do we know what space is? Space is a continuous area or expanse which is free, available and unoccupied. It is a boundless three-dimensional extent in which objects and events have relative positions and directions. It is the zone above and around our planet where there is no air to breathe or light to scatter. It is a vacuum devoid of matter where sound can not travel. The earth looks round only when seen from space. One can only see land and water. In space, there is no gravity due to which things float in the air.</p>
+    <p>Space travel began in 1957 with the launch of the first satellite, called Sputnik, by the former Soviet Union. Many satellites and probes are launched into space. This is done to observe the Earth, collect data on climate and weather, supply modern navigation systems, explore distant celestial bodies and perform scientific research related to space. Yuri Gagarin became the first human being to fly to space on 12th April 1961.</p>
+    <dl>
+        <dt> Famous Astronots </dt>
+        <dd> 1. <span onmouseover="neilfunc()">Neil Armstrong</span></dd>
+        <dd> 2. Buzz aldrin</dd>
+        <dd> 3. John Glenn</dd>
+        <dd> 4. Yuri Gagarin</dd>
+        <dd> 5. Jim lovell</dd>
+    </dl>
+    <img src="https://stories.purdue.edu/app/uploads/2025/08/NeilArmstrong-Story-Hero2.jpg" alt="Neil Armstrong" id="neil">
+    
+</body>
+</html>
