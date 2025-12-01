@@ -3,8 +3,14 @@
     justify-content: center;
 }
 a{
-    padding: 500;
+    padding: 450;
 }
 img{
     margin: 11;
 }         
+#hotdog{
+    display: none;
+}
+#counter{
+    display: none;
+}

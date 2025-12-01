@@ -26,9 +26,32 @@
 
         </style>
         <script>
+            showing="none"
+            images=[
+                "https://www.belbrandsfoodservice.com/wp-content/uploads/2018/05/recipe-desktop-merkts-cheesy-hot-dawg.jpg",
+                "https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480/img/recipe/ras/Assets/102cf51c-9220-4278-8b63-2b9611ad275e/Derivates/3831dbe2-352e-4409-a2e2-fc87d11cab0a.jpg",
+                "https://www.weber.edu/wsuimages/TemplateExamples/hotdog.png",
+                "https://img.pikbest.com/photo/20240708/buger-image-with-round-table_10658050.jpg!bw700"
+            ]
             function addinfo(){
-                var pic="https://www.burntpelletbbq.com/wp-content/uploads/2023/08/IMG_9785-scaled.jpeg" document.getElementById("picture Info") alt="Hot Dog Buger"
+                if(showing=="none"){
+                    document.getElementById("hotdog").style.display="block"
+                    document.getElementById("counter").style.display="block"
+                    showing="block"
+                    document.getElementById("Button1").innerHTML="No More"
+                }
+                else if(showing=="block"){
+                    document.getElementById("hotdog").style.display="none"
+                    document.getElementById("counter").style.display="none"
+                    showing="none"
+                    document.getElementById("Button1").innerHTML="Additional info"
+                }
             }
+            function burger(){
+
+            }
+
+            
         </script>
     </head>
 
@@ -40,7 +63,7 @@
        
         <h2>My Thoughts</h2>
         <p>I find that a Hot Dog is not a sandwich. Just look at the facts, it does not have the same satifaction that a Sandwich would and it does not have the bread sensations that a normal Sandwich would have. it also does not have the shape of a sandwich. Would you really concider a long peace of bread to be like a Sandwich. many come to find that after having a Sanwich and a Hot dog they do not have the same satifaction, sensation, or joy. In the end we see that a Hot Dog has no way of being a Sandwich. </p>
-        <a href="https://www.tasteofhome.com/article/is-the-hot-dog-a-sandwich/" taget="_blank">Someone elses thoughts on this matter.</a> <br>
+        <a href="https://www.tasteofhome.com/article/is-the-hot-dog-a-sandwich/" target="_blank">Someone elses thoughts on this matter.</a> <br>
         <div id="div1">
         <img id="img1" src="https://johnrieber.com/wp-content/uploads/2016/09/the-hamdog-burger.jpg?w=700&h=394" alt="Hot Dog inside a buger" id="img1"/>
        <img id="img2" src="https://media.gettyimages.com/id/92119998/photo/burguer-and-hot-dog-with-french-fries.jpg?s=612x612&w=gi&k=20&c=JDxetFl_I54TyIZhmmW9en5a6mvPKvH1RrmlnPyNJ8Y=" alt="Hot Dog next to a Burger"/>
@@ -58,6 +81,11 @@
         <dd>Mayonnaise</dd>
         <dd>Guacamole</dd>
         </dl>
-        <button id="Button1" onclick="addinfo"> Additional info</button>
-    </body>
+        <button id="Button1" onclick="addinfo()">Additional info</button>
+        <img id="hotdog" src="https://www.burntpelletbbq.com/wp-content/uploads/2023/08/IMG_9785-scaled.jpeg" height="200px" alt="Hotdog burger">
+        <div id="counter">
+        <h1>---Counter Claim---</h1>
+        <p>Whether a hot dog qualifies as a sandwich is a subject of passionate, ongoing debate, largely revolving around the precise definition of the latter term. The core argument for classifying a hot dog as a sandwich rests on a broad, literal interpretation: a sandwich generally consists of meat (or a filling) placed between two pieces of bread or inside a sliced bun [1]. Since a frankfurter is a processed meat product served in a longitudinally sliced bun, it perfectly fits this structural description [1]. Even institutional authorities lend credence to this view; both the U.S. Department of Agriculture (USDA) and the dictionary publisher Merriam-Webster have definitions that logically include the hot dog under the sandwich umbrella</p></div>
+        <h2>---Magic Image---</h2>
+        <img src="https://www.belbrandsfoodservice.com/wp-content/uploads/2018/05/recipe-desktop-merkts-cheesy-hot-dawg.jpg" height="200px" onmouseover="burger()">
 </html>
