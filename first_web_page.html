@@ -33,6 +33,7 @@
                 "https://www.weber.edu/wsuimages/TemplateExamples/hotdog.png",
                 "https://img.pikbest.com/photo/20240708/buger-image-with-round-table_10658050.jpg!bw700"
             ]
+            index=0
             function addinfo(){
                 if(showing=="none"){
                     document.getElementById("hotdog").style.display="block"
@@ -48,7 +49,11 @@
                 }
             }
             function burger(){
-
+                document.getElementById("magic").src=images[index]
+                index+=1
+                if(index>=images.length){
+                    index=0
+                }
             }
 
             
@@ -87,5 +92,5 @@
         <h1>---Counter Claim---</h1>
         <p>Whether a hot dog qualifies as a sandwich is a subject of passionate, ongoing debate, largely revolving around the precise definition of the latter term. The core argument for classifying a hot dog as a sandwich rests on a broad, literal interpretation: a sandwich generally consists of meat (or a filling) placed between two pieces of bread or inside a sliced bun [1]. Since a frankfurter is a processed meat product served in a longitudinally sliced bun, it perfectly fits this structural description [1]. Even institutional authorities lend credence to this view; both the U.S. Department of Agriculture (USDA) and the dictionary publisher Merriam-Webster have definitions that logically include the hot dog under the sandwich umbrella</p></div>
         <h2>---Magic Image---</h2>
-        <img src="https://www.belbrandsfoodservice.com/wp-content/uploads/2018/05/recipe-desktop-merkts-cheesy-hot-dawg.jpg" height="200px" onmouseover="burger()">
+        <img id="magic" src="https://www.belbrandsfoodservice.com/wp-content/uploads/2018/05/recipe-desktop-merkts-cheesy-hot-dawg.jpg" height="200px" onmouseover="burger()">
 </html>
