@@ -5,13 +5,13 @@ app = Flask(__name__)
 
 @app.route("/", methods=["POST", "GET"])
 def home():
-    if request.methed == "POST":
+    if request.method == "POST":
         return redirect(url_for("user",name=request.form["name"]))
     return render_template("index.html")
 
 @app.route("/contact")
 def contact():
-    return "<p>Don't contact me. I dont't want to talk to you.</p>"
+    return render_template("contact.html")
 
 @app.route("/<name>")
 def user(name):
@@ -21,12 +21,6 @@ def user(name):
 if __name__ == "__main__":
     app.run(debug=True)
     
-
-
-
-
-
-
 
 
 
@@ -48,7 +42,20 @@ if __name__ == "__main__":
     app.run(debug=True)"""
 
 #How can you reference subpages on your Flask project? (Meaning the difference between the home page and a personal profile)
-#
+"""from flask import Flask, render_template, request, redirect, url_for
+
+app = Flask(__name__)
+
+@app.route("/", methods=["POST", "GET"])
+def home():
+    if request.method == "POST":
+        return redirect(url_for("user",name=request.form["name"]))
+    return render_template("index.html")
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")"""
+
 
 #What are templates?
-# alows you build a full webpage with more that one html tages
+# alows you build a full webpage with more that one html tages that have same setup but diffrent content

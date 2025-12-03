@@ -1,25 +1,13 @@
 <!--LC 7th Flask Notes-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Template</title>
-    <style>
-        img{
-            height: 150px;
-            width: auto;
-        }
-    </style>
-</head>
-<body>
-    <h1>First Flask Project</h1>
+{% extends "base.html" %}
+{% block contact %}Home - Flask{% endblock %}
+{% block body %}
+    <h1>Welcome</h1>
     <form method="Post">
         <label for="name"> Enter your name:</label>
         <input type="text" name="name" placeholder="name">
         <br>
         <input type="submit" value="Submit">
     </form>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Oftheunicorn.jpg" alt="Unicorn">
-</body>
-</html>
+    <img src="https://i.pinimg.com/736x/a2/67/76/a26776ac13bf650b0b65e3dcc642ccee.jpg" alt="Ummmmmm IDK">
+{% endblock %}
