@@ -58,4 +58,4 @@ def contact():
 
 
 #What are templates?
-# alows you build a full webpage with more that one html tages that have same setup but diffrent content
+# alows you build a full webpage with more than one html tag that have the same setup but diffrent content
