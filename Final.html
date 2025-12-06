@@ -6,10 +6,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>staycation of Bear Lake</title>
-    <style>
-
-        
-    </style>
+    <script>
+        showing="none"
+        images=[
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlUk6gp1aJegQl0oac7Bg4wgX55VtZKMn5jA&s", "https://i0.wp.com/travelawaits.com/wp-content/uploads/2021/04/bear-lake-beach-garden-citye58486.jpg?resize=725%2C545&ssl=1","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPPIyypJR5vpc2wzJDSd0Etmszt0zGyqMxQQ&s"
+        ]
+        index=0
+        function more(){
+                if(showing=="none"){
+                    document.getElementById("pic").style.display="block"
+                    document.getElementById("AddInfo").style.display="block"
+                    showing="block"
+                    document.getElementById("Button").innerHTML="No More"
+                }
+                else if(showing=="block"){
+                    document.getElementById("pic").style.display="none"
+                    document.getElementById("AddInfo").style.display="none"
+                    showing="none"
+                    document.getElementById("Button").innerHTML="Additional info"
+                }
+            }
+            function magic(){
+                document.getElementById("pic").src=images[index]
+                index+=1
+                if(index>=images.length){
+                    index=0
+                }
+            }
+    </script>
 </head>
 <body>
     <div id="div1" class="container">
@@ -18,12 +42,31 @@
         <div class="centered">---Bear Lake---</div>
             <div class="centered1">Life's a beach, but this lake's better</div>
         </div>
+    
         
     </div>
+    
     <p id="par1">Bear Lake, straddling the Utah and Idaho border, is an essential destination famous for its remarkable, vibrant turquoise-blue water often nicknamed the "Caribbean of the Rockies." This unique coloration stems from suspended limestone deposits, creating a stunning visual backdrop for abundant year-round recreational opportunities like boating, swimming, and snowmobiling. The region is also renowned for its delicious local raspberries, which are celebrated during the annual Raspberry Days festival. Overall, Bear Lake offers visitors a unique blend of natural beauty, outdoor adventure, and local flavor that makes it a memorable trip.</p>
     <div class="img2">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1WFkVVb8jxGsBldXKYxgh39oC6rNkXbH3CA&s" alt="Bear Lake Water" height="250px">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Bear_Lake.jpg" alt="Bear Lake Land" height="250px">
+    <img id="img3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1WFkVVb8jxGsBldXKYxgh39oC6rNkXbH3CA&s" alt="Bear Lake Water" height="250px">
+    <img id="img4" src="https://upload.wikimedia.org/wikipedia/commons/4/48/Bear_Lake.jpg" alt="Bear Lake Land" height="250px">
     </div>
+    <div class="div2">
+        <dl>
+            <dt>REASONS TO STAY</dt>
+            <dd> The area around the lake offers a plethora of exceptional lodging choices, featuring charming cabin rentals nestled in almost every corner of the shoreline, ensuring guests have numerous cozy retreats to choose from.</dd>
+            <dd>
+                This destination offers year-round recreation, featuring summer water sports and trail activities like hiking and biking, plus winter fun including snowmobiling, skiing, and ice fishing, with nearby geological exploration available in all seasons.</dd>
+            <dd>
+                Bear Lake Valley is renowned for its legendary raspberry shakes, celebrated during the annual Raspberry Days festival, and has a rich history as a stop on the Oregon Trail, which can be explored at local museums.
+            </dd>
+            <dd>
+                ear Lake offers stunning natural beauty with its brilliant turquoise water—nicknamed the "Caribbean of the Rockies"—miles of sandy beaches, and picturesque views of the surrounding Wasatch and Bear River mountain ranges.
+            </dd>
+        </dl>
+    <button id="Button" onclick="more()">Additional info</button>
+    <div id="AddInfo">
+        <p>Bear Lake, often called the "Caribbean of the Rockies," is a large natural freshwater lake straddling the Utah-Idaho border, renowned for its striking turquoise-blue color caused by suspended limestone deposits. The lake is an ancient body of water, over 250,000 years old, that has fostered several unique fish species found nowhere else on Earth. Today, it is a popular destination for boating, fishing, and its famous annual raspberry harvest festival. (Lookes of Bear lake at Diffrent Seasons)</p></div>
+        <img id="pic" src="https://img.freepik.com/premium-vector/blue-bear-logo-that-says-bear-lake_695276-3653.jpg" onmouseover="magic()" alt="Bear Lake Logo"
 </body>
 </html>
